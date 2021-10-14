@@ -1,0 +1,230 @@
+/* Css reset  */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Variables */
+:root{
+    --primary-color: black;
+    --secondary-color:red;
+}
+
+/* Navigation bar  */
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 75%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#navbar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+}
+
+/* Navigation: Logo  */
+
+#logo img {
+    width: 130px;
+    height: 100px;
+}
+
+/* Navigation: List style  */
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+}
+#navbar ul li a{
+    color: white;
+    margin: 0px 15px;
+    padding: 0px 10px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+#navbar ul li a:hover{
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Home */
+#home::before{
+    content: "";
+    background: url(../Img/bg.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 100px;
+}
+/* Home heading and paragraph  */
+#home h1{
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+#home p{
+    margin: 3px 50px;
+    padding: 3px 44px;
+    font-size: 20px;
+}
+
+
+/* Section: Servces  */
+#services h1{
+    margin: 10px;
+    margin-top: 135px;
+    margin-bottom: 50px;
+    padding: 30px;
+}
+/* Main service box  */
+.service-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    border: 2px solid var(--secondary-color);
+    background-color: rgb(182, 182, 231);
+    border-radius: 23px;
+    padding: 5px 8px;
+    margin: 5px;
+}
+/* box image */
+
+.box img{
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 2px 2px var(--primary-color);
+    cursor: pointer;
+    transition: all 2s ease-in-out 0s;
+}
+#box2 img{
+    opacity: 0.8;
+}
+#box3 img{
+    opacity: 0.8;
+}
+/* Transition+ transform  */
+.box img:hover{
+    transform: rotate(360deg);
+}
+
+
+
+/* Section: Clients  */
+#clients::before{
+    content: "";
+    position: absolute;
+    background:url(../Img/bg2.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 75%;
+    z-index: -1;
+    opacity: 0.5;
+}
+#clients h1{
+    margin: 10px;
+    margin-top: 80px;
+    padding-top: 55px;
+    padding-bottom: 50px;
+}
+#client-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-container{
+    /* border: 2px solid red; */
+    margin: 5px;
+}
+/* Client section images  */
+.img-container img{
+    height: 150px;
+    border-radius: 8px;
+}
+
+/* Section: Contact Us  */
+#contact-us::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    background: url(../Img/Contact\ Us.jpg) center center/cover;
+    z-index: -1;
+    opacity: 0.3;
+}
+#contact-us h1{
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-container input, .form-container textarea{
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Footer */
+#end{
+    background-color:var(--primary-color);
+    color: white;
+}
+
+/* Utility */
+
+.h-primary{
+    font-size: 3rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.h-secondary{
+    font-size: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.center{
+    text-align: center;
+}
+
+.btn{
+    margin-top: 30px;
+    width: 200px;
+    height: 40px;
+    padding: 5px 23px;
+    border-radius: 23px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(100, 96, 96);
+    box-shadow: 4px 4px var(--primary-color);
+    cursor: pointer;
+}
